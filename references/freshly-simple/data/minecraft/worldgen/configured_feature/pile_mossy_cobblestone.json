@@ -1,0 +1,22 @@
+{
+  "config": {
+    "state_provider": {
+      "entries": [
+        {
+          "weight": 15,
+          "data": {
+            "Name": "minecraft:mossy_cobblestone"
+          }
+        },
+        {
+          "weight": 5,
+          "data": {
+            "Name": "minecraft:cobblestone"
+          }
+        }
+      ],
+      "type": "minecraft:weighted_state_provider"
+    }
+  },
+  "type": "minecraft:block_pile"
+}

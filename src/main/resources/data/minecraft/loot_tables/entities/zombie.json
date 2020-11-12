@@ -1,0 +1,31 @@
+{
+  "type":"minecraft:entity",
+  "pools":[
+    {
+      "rolls":4,
+      "entries":[
+        {
+          "type":"minecraft:item",
+          "name":"minecraft:porkchop"
+        },
+        {
+          "type":"minecraft:item",
+          "name":"minecraft:beef"
+        }
+      ]
+    },
+    {
+      "rolls":4,
+      "entries":[
+        {
+          "type":"minecraft:item",
+          "name":"minecraft:porkchop"
+        },
+        {
+          "type":"minecraft:item",
+          "name":"minecraft:beef"
+        }
+      ]
+    }
+  ]
+}
