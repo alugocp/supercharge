@@ -6,8 +6,8 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.ResourceLocation;
@@ -46,7 +46,7 @@ public class OreGenerator{
     .func_242731_b(count)
     .square();
 
-    Registry<ConfiguredFeature<?, ?>> registry=WorldGenRegistries.CONFIGURED_FEATURE;
+    Registry<ConfiguredFeature<?,?>> registry=WorldGenRegistries.CONFIGURED_FEATURE;
     Registry.register(registry,new ResourceLocation(location),feature);
     features.add(feature);
   }
