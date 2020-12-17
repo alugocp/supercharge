@@ -1,32 +1,28 @@
 modLoader="javafml"
 loaderVersion="[34,)"
 license="All rights reserved"
-#issueTrackerURL="http://my.issue.tracker/"
 
 [[mods]] #mandatory
-modId="examplemod" #mandatory
-version="${file.jarVersion}" #mandatory
-displayName="Resource Wars" #mandatory
-#updateJSONURL="http://myurl.me/"
+modId="supercharge"
+version="${file.jarVersion}"
+displayName="Supercharge"
 displayURL="http://lugocorp.net/"
-# A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="examplemod.png"
 credits="Brought to you by LugoCorp"
 authors="Alex Lugo"
 description='''
-This is a mod that supercharges enemy spawns and resource farming. More enemies spawn at night and they have much better drop rates. New enemies include: coal golems, gold golems, diamond golems, emerald golems
+This is a mod that supercharges enemy spawns and resource farming. More enemies spawn at night and they have much better drop rates.
 
 Secure renewable resource points and build up a base to defend yourself from night raids.
 '''
 
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]]
+[[dependencies.supercharge]]
     modId="forge"
     mandatory=true
     versionRange="[34,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.examplemod]]
+[[dependencies.supercharge]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.3]"
