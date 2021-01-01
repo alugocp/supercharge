@@ -10,12 +10,14 @@ import org.apache.logging.log4j.Logger;
 public class Supercharge{
   private final Logger logger=LogManager.getLogger();
   private final OreGenerator ore=new OreGenerator();
+  private final PigSpawnCap pigs=new PigSpawnCap();
   private final SpawnBuff spawn=new SpawnBuff();
   private final ExpBoost exp=new ExpBoost();
 
   public Supercharge(){
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
     MinecraftForge.EVENT_BUS.register(spawn);
+    MinecraftForge.EVENT_BUS.register(pigs);
     MinecraftForge.EVENT_BUS.register(ore);
     MinecraftForge.EVENT_BUS.register(exp);
     logger.info("Supercharge mod was initialized");
