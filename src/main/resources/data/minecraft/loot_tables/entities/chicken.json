@@ -2,25 +2,22 @@
   "type":"minecraft:entity",
   "pools":[
     {
-      "rolls":1,
+      "rolls":2,
       "entries":[
         {
           "type":"minecraft:item",
-          "name":"minecraft:egg"
+          "name":"minecraft:egg",
+          "weight":1
+        },
+        {
+          "type":"minecraft:item",
+          "name":"minecraft:feather",
+          "weight":1
         }
       ]
     },
     {
-      "rolls":1,
-      "entries":[
-        {
-          "type":"minecraft:item",
-          "name":"minecraft:feather"
-        }
-      ]
-    },
-    {
-      "rolls":1,
+      "rolls":2,
       "entries":[
         {
           "type":"minecraft:item",
