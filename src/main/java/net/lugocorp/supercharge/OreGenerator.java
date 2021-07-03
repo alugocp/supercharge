@@ -22,7 +22,7 @@ public class OreGenerator{
   @SubscribeEvent(priority=EventPriority.HIGH)
   public void registerOreGeneration(BiomeLoadingEvent evt){
     for(ConfiguredFeature<?,?> feature:features){
-      evt.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,feature);
+      evt.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,feature);
     }
   }
 
@@ -37,14 +37,14 @@ public class OreGenerator{
     generate("minecraft:ore_coal",Blocks.COAL_ORE,20,30,0,100,30);
   }
   private void generate(String location,Block block,int size,int min,int offset,int max,int count){
-    ConfiguredFeature<?,?> feature=Feature.ORE.withConfiguration(new OreFeatureConfig(
-      OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-      block.getDefaultState(),
+    ConfiguredFeature<?,?> feature=Feature.ORE.configured(new OreFeatureConfig(
+      OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+      block.defaultBlockState(),
       size
     ))
-    .withPlacement(Placement.RANGE.configure(new TopSolidRangeConfig(min,offset,max)))
-    .func_242731_b(count)
-    .square();
+    .decorated(Placement.RANGE.configured(new TopSolidRangeConfig(min,offset,max)))
+    .count(count)
+    .squared();
 
     Registry<ConfiguredFeature<?,?>> registry=WorldGenRegistries.CONFIGURED_FEATURE;
     Registry.register(registry,new ResourceLocation(location),feature);
