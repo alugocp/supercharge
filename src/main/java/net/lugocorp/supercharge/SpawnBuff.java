@@ -25,7 +25,6 @@ public class SpawnBuff{
     spawns.add(new MobSpawnInfo.Spawners(EntityType.VINDICATOR,5,1,4));
     spawns.add(new MobSpawnInfo.Spawners(EntityType.IRON_GOLEM,10,1,4));
     spawns.add(new MobSpawnInfo.Spawners(EntityType.RAVAGER,5,1,4));
-    //spawns.add(new MobSpawnInfo.Spawners(EntityType.BLAZE,5,1,4));
   }
   private List<EntityType<?>> getEditedTypes(){
     List<EntityType<?>> types=new ArrayList<>();
@@ -38,7 +37,6 @@ public class SpawnBuff{
     types.add(EntityType.VINDICATOR);
     types.add(EntityType.IRON_GOLEM);
     types.add(EntityType.RAVAGER);
-    //types.add(EntityType.BLAZE);
     return types;
   }
 }
